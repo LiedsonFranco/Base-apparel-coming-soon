@@ -14,16 +14,15 @@ body{
     font-size: 16px;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
- 
 }
 h1{
     color: var(--dark-grayish-red);
     font-weight: 300;
 }
-input::placeholder{
+form input::placeholder{
     color: var(--desaturated-red);
 }
-button{
+form button{
     background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     display: flex;
     justify-content: center;
@@ -31,7 +30,7 @@ button{
     box-shadow: 3px 5px 10px var(--desaturated-red);
     transition: 1s;
 }
-button:hover{
+form button:hover{
     left: 10px;
     transition: 1s;
 
@@ -42,3 +41,47 @@ form{
 .text-desaturated-red{
     color: var(--desaturated-red);
 }
+@media only screen and (max-width: 700px) {
+    main{
+        display: grid;
+        grid-template-rows: .5fr 1fr auto;
+        grid-template-columns: 1fr;
+    }
+    header{
+        grid-row: 1;
+        grid-column: 1;
+    
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    #hero{
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 30px;
+
+    }
+    #msg{
+        grid-column: 1;
+        grid-row: 3;
+    }
+  }
+@media only screen and (min-width: 701px) {
+    body {
+      background-image: url(../images/bg-pattern-desktop.svg);
+      background-repeat: no-repeat;
+    }
+    header{
+        grid-row: 1;
+        grid-column: 1;
+    
+    }
+    #hero{
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+    #msg{
+        grid-column: 1;
+        grid-row: 1;
+    }
+  }
