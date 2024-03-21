@@ -5,29 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
+<body class="h-screen mb-20">
+<header class="ml-5 mt-7 mb-7">
+  <a href="#">
+    <img src="images/logo.svg" alt="">
+  </a>
+</header>
+<main>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+  <div id="hero" class="mb-10">
+    <img src="images/hero-mobile.jpg" alt="hero-mobile" style="width: 100%;">
+  </div>
+  <div class="w-[90%] p-3 m-auto">
+    <h1 class="text-5xl text-center font-semibold m-5">
+      <span class="text-desaturated-red font-light">We're</span>
+      <br>
+      coming <br>soon
+    </h1>
+
+    <p class="text-desaturated-red text-center font-normal text-">
+      Hello fellow shoppers! We're currently building our new fashion store. 
+      Add your email below to stay up-to-date with announcements and our <br>launch deals.
     </p>
-  </footer>
+
+    <form class="flex justify-between mt-10  rounded-full ">
+      <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="email" class="border-none p-3 bg-transparent focus:outline-none">
+      <button class="rounded-full w-[25%] relative "><img src="images/icon-arrow.svg" alt="icon-arrow"></button>
+    </form>
+</div>
+</main>
 </body>
 </html>
