@@ -3,7 +3,10 @@
     --soft-red: hsl(0, 93%, 68%);
     --dark-grayish-red: hsl(0, 6%, 24%);
 }
-
+@keyframes test{
+    from {left: 0;}
+    to {left: 25px;}
+}
 *{
     padding: 0;
     margin: 0;
@@ -11,6 +14,7 @@
 }
 body{
     background-image: linear-gradient(hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+    background-size: cover;
     font-size: 16px;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -22,7 +26,7 @@ h1{
 form input::placeholder{
     color: var(--desaturated-red);
 }
-form button{
+form button[type='button']{
     background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     display: flex;
     justify-content: center;
@@ -30,10 +34,10 @@ form button{
     box-shadow: 3px 5px 10px var(--desaturated-red);
     transition: 1s;
 }
-form button:hover{
-    left: 10px;
+form button:focus-within{
     transition: 1s;
-
+    animation: test 1s;
+    animation-fill-mode: forwards;
 }
 form{
     border: 1px solid var(--desaturated-red);
@@ -41,10 +45,13 @@ form{
 .text-desaturated-red{
     color: var(--desaturated-red);
 }
+.form-error{
+    border: 1px solid var(--soft-red);
+}
 @media only screen and (max-width: 700px) {
     main{
         display: grid;
-        grid-template-rows: .5fr 1fr auto;
+        grid-template-rows: 100px 1fr auto;
         grid-template-columns: 1fr;
     }
     header{
